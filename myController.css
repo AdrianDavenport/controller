@@ -1,201 +1,238 @@
+Skip to content
+ 
+Search…
+All gists
+Back to GitHub
+Sign in
+Sign up
+Instantly share code, notes, and snippets.
+
+@CrazyGrape
+CrazyGrape/DualSense Skin.css
+Last active 3 months ago
+Code
+Revisions
+2
+Stars
+6
+Forks
+5
+Clone this repository at &lt;script src=&quot;https://gist.github.com/CrazyGrape/08544e693f5d66b27e9261aef6380154.js&quot;&gt;&lt;/script&gt;
+<script src="https://gist.github.com/CrazyGrape/08544e693f5d66b27e9261aef6380154.js"></script>
+DualSense (PS5) Skin for GamepadViewer.com
+DualSense Skin.css
+/* -- PS5 Skin for GamepadViewer | Created by CrazyGrape -- 
+HOW TO USE IN OBS:
+1. Go to GamepadViewer.com and generate a URL (make sure to USE THE XBOX SKIN or leave the skin blank)
+2. Generate your URL once the settings are correct and copy it to your clipboard
+3. In OBS, create a new browser source
+4. In the URL Screen, paste the link copied from GamepadViewer.com
+5. Set the width to 807 and the height to 651
+6. Paste the contents of this CSS file into the Custom CSS field
+7. Click Done.
+8. Enjoy the skin! */
 body { 
     background-color: #000000; 
     background-color: RGBA(0, 0, 0, 0); 
     margin: 0 auto; 
     overflow: hidden; 
-}
-/*This class defines the base attributes of the skin*/
-.controller.custom{
-    background: url(https://i.imgur.com/CYRynAT.png);
-    width: 830px;
-    height: 631px;
+} .controller.xbox{
+    background: url(https://i.imgur.com/fJIyBwn.png);
+    width: 807px;
+    height: 651px;
     margin-left: 0;
     margin-top: 0;
-}
-
-/* Analog sticks follow the same principles as the triggers in terms of positioning
-Note that the rotation of the sticks in hard coded with javascript, so it applies 
-the CSS inline. */
-.custom .sticks{
-    position: absolute;
+} .xbox .sticks {
+	width: 367px;
+    height: 100px;
+    left: 220px;
+    top: 333px;
+}.xbox .stick {
+    background: url(https://i.imgur.com/nXaGdI2.png);
     width: 100px;
     height: 100px;
-    left: 240px;
-    top: 308px;
-}
-.custom .stick{
-    position: absolute;
-    background: url(https://i.imgur.com/CVRn6CX.png);
-    height: 100px;
-    width: 100px;
-}
-.custom .stick.pressed.left{
-    background-position-x: -102px;
-}
-.custom .stick.pressed.right{
-    background-position-x: -102px;
-}
-.custom .stick.right{
-    left: calc(100% + 150px);
-}
-
-/* This is to size and position the containing div for the 
-start and select buttons. */
-.custom .arrows{
-    position: absolute;
-    width: 418px;
-    height: 0px;
-    top: 127px;
-    left: 206px;
-}
-/* Setting the size and CSS sprite for the start adn select buttons */
-.custom .back, .custom .start{
-    background: url(https://i.imgur.com/C1YPtca.png);
-    width: 24px;
-    height: 40px;
-}
-.custom .back.pressed, .custom .start.pressed{
-    background-position-y: 40px;
-    margin-top: -2px;
-}
-.custom .back{
-    float: left;
-    width: 24px;
-}
-.custom .start{
-    float: right;
-    width: 24px;
-    background-position: 24px 0;
-}
-
-/* Dpad possitioning and sizing */
-.custom .dpad {
-    position: absolute;
-    width: 140px;
-    height: 132px;
-    top: 142px;
-    left: 75px;
-}
-.custom .face{
-    background: url(https://i.imgur.com/xHzP6yc.png);
-    position: absolute;
-}
-.custom .face.up, .custom .face.down{
-    width: 50px;
-    height: 64px;
-}
-.custom .face.left, .custom .face.right{
-    width: 66px;
-    height: 50px;
-}
-.custom .face.up{
-    left: 50px;
+} .xbox .stick.pressed {
+    background-position: -102px 0;
+} .xbox .stick.right {
     top: 0;
-    background-position: 0px 0px;
-}
-.custom .face.down{
-    left: 50px;
-    top: 85px;
-    background-position: 182px 0;
-}
-.custom .face.left{
-    top: 50px;
-    left: -2px;
-    background-position: -103px 0;
-}
-.custom .face.right{
-    top: 50px;
-    right: -9px;
-    background-position: 66px 0;
-}
-.custom .face.pressed{
-    margin-top: -1px;
-    background-position-y: 64px;
-}
-
-/* Positioning and size of the container for the face buttons */
-.custom .abxy{
-    position: absolute;
-    width: 204px;
-    height: 205px;
-    top: 137px;
-    left: 592px;
-}
-/* base class used to simplify the sprite mapping */
-.custom .button{
-    position: absolute;
-    width: 54px;
-    height: 54px;
-    background: url(https://i.imgur.com/bpt0MPg.png);
-}
-.custom .button.pressed{
-    background-position-y: -56px;
-    margin-top: 0px;
-}
-.custom .a{
-    background-position: 0px 0;
-    top: 121px;
+    left: 267px;
+} .xbox .abxy {
+    width: 181px;
+    height: 181px;
+    left: 573px;
+    top: 178px;
+} .xbox .button {
+    background: url(https://i.imgur.com/DVqDSsJ.png);
+    width: 58px;
+    height: 58px;
+} .xbox .button.pressed {
+  	background-position-y: -59px;
+	margin-top: 0;
+} .xbox .a {
+    background-position: 0 0;
     left: 61px;
-}
-.custom .b{
-    background-position: 166px 0;
-    top: 60px;
-    right: 29px;
-}
-.custom .x{
-    background-position: 110px 0;
-    top: 60px;
-}
-.custom .y{
-    background-position: 54px 0;
+    top: 123px;
+} .xbox .b {
+    background-position: -59px 0;
+    left: 123px;
+    top: 62px;
+} .xbox .x {
+    background-position: -118px 0;
+    left: 0px;
+    top: 61px;
+} .xbox .y {
+    background-position: -177px 0;
     left: 61px;
-}
-
-/* The bumpers follow the same methodology as the triggers in terms of
-placement */
-.custom .bumper{
-    width: 81px;
-    height: 32px;
-    background: url(https://i.imgur.com/JocHHed.png);
+    top: 0px;
+} .xbox .arrows {
+    left: 195px;
+	top: 140px;
+    width: 416px;
+    height: 57px;
+} .xbox .quadrant { 
+    display: none; 
+} .xbox .back, .xbox .start {
+    background: url(https://i.imgur.com/YJRVQxC.png);
+    width: 27px;
+    height: 57px;
     opacity: 0;
-}
-.custom .bumpers{
-    position: absolute;
-    width: 601px;
-    height: 28px;
-    left: 114px;
-    top: 78px;
-}
-.custom .bumper.pressed{
-    opacity: 1;
-}
-.custom .bumper.left{
-    float: left;
-}
-.custom .bumper.right{
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+} .xbox .start {
+    background-position: 27px 0;
     float: right;
-}
-
-.custom .triggers{
+} .xbox .dpad {
+	width: 144px;
+    height: 144px;
+    left: 71px;
+    top: 196px;
+} .xbox .face {
+    background: url(https://i.imgur.com/hCmzXWK.png);
     position: absolute;
-    width: 601px;
-    height: 65px;
-    left: 115px;
-}
-.custom .trigger{
-    background: url(https://i.imgur.com/k8PnZZG.png);
-    width:84px;
-    height:73px;
     opacity: 0;
+} .xbox .face.up {
+    background-position: 0 -68px;
+    width: 52px;
+    height: 63px;
+    left: 46px;
+} .xbox .face.down {
+    background-position: -54px 63px;
+    width: 52px;
+    height: 63px;
+    left: 46px;
+    top: 81px;
+} .xbox .face.left {
+    background-position: -108px -68px;
+    width: 64px;
+    height: 52px;
+    left: -1px;
+    top: 47px; 
+} .xbox .face.right {
+    background-position: -175px -68px;
+    width: 63px;
+    height: 52px;
+    left: 81px;
+    top: 46px;
+} .xbox .bumpers {
+    width: 620px;
+    height: 35px;
+    left: 93px;
+    top: 114px;
+} .xbox .bumper {
+    background: url(https://i.imgur.com/2YssqRT.png);
+    width: 110px;
+    height: 35px;
+    opacity: 0;
+} .xbox .triggers {
+    width: 619px;
+    height: 108px;
+    left: 94px;
+} .xbox .trigger {
+    background: url(https://i.imgur.com/LsxmGBD.png);
+    width: 111px;
+    height: 108px;
+    opacity: 0;
+} .xbox .trigger.right {
+    background-position: -113px 0;
+	transform: rotateY(0);
 }
-.custom .trigger.right {
-    background-position: 84px 0;
-}
-.custom .trigger.left{ 
-    float: left;
-}
-.custom .trigger.right{
-    float: right;
-}
+/*
+The general design of the DualSense (tm) controller, as well as the PlayStation (tm) logo, are the intellectual property of Sony.
+Vectorized design referenced in the images linked above: copyright (c) CrazyGrape 2021
+This work is licensed under a Creative Commons Attribution 3.0 United States License. The terms of this license are available at https://creativecommons.org/licenses/by/3.0/us/
+*/
+@hnorkowski
+hnorkowski commented on Feb 3, 2021 • 
+How did u fix the wrong readouts? My Buttons are scrambled and my right stick always points upwards.
+EDIT: I could fix it with "remap buttons" but not for the d-pad
+
+@CrazyGrape
+Author
+CrazyGrape commented on Feb 6, 2021
+How did u fix the wrong readouts? My Buttons are scrambled and my right stick always points upwards.
+EDIT: I could fix it with "remap buttons" but not for the d-pad
+
+There are two methods you can use, one is to install DS4Windows and use that, it should map properly but then gets recognized as an xbox controller on the computer so may display improper button icons along with a few other side effects. The other method is to install vjoy and UCR (I'd recommend using Jayraydee's PS5 setup if you want to go the vjoy route). The latter method works with fewer side effects, but also means you end up with two 'controllers', one virtual (the dpad) and one physical, after which point you have to add the dpad as a second controller in OBS. I currently don't have a CSS file for the standalone dpad overlay, but if you want to mess around with that before I get around to it, feel free to do so. DS4Windows is probably the easiest if you want it working ASAP, and was what I was using when I first put this exact CSS file together.
+
+You can also follow any updates I make with the controller at https://github.com/CrazyGrape/crazygrape.github.io/tree/gh-pages/gamepadviewer-skin_dualsense, and this gist will probably end up abandoned
+
+@AihjawvBawiuojfvnW0of92
+AihjawvBawiuojfvnW0of92 commented on Jan 1, 2022
+Is there a possibility that you could make one for the red dualsense controller?
+
+@jSMMM2704
+jSMMM2704 commented on Mar 2, 2022
+Hey, i'm having trouble altering the skin you have made and have tried everything i could. I've got all the single assets done and uploaded on Imgur, similar to you but can not get the Controller to show up properly inside OBS. Could you maybe help me?
+
+@CrazyGrape
+Author
+CrazyGrape commented on Mar 2, 2022
+Hey, i'm having trouble altering the skin you have made and have tried everything i could. I've got all the single assets done and uploaded on Imgur, similar to you but can not get the Controller to show up properly inside OBS. Could you maybe help me?
+
+I wrote this thing a while ago and it may have broken as the gamepadviewer site updated. I'll need more information, also make sure all of the images are direct hyperlinks ending in ".png" or similar (when you click them, it should show you the image directly and not a full imgur webpage).
+Does the controller show up properly when un-modified?
+
+@jSMMM2704
+jSMMM2704 commented on Mar 2, 2022
+It seems like the hyperlink was the problem. Had it linked to the imgur webpage instead. Thank you for your help! Now there are just some minor things like a bit of stick drift to the side but i should figure that out soon.
+
+Thank you for the fast reply, saved my evening with that because i spend like 8 hours on the design itself. :=)
+
+@lilMegumax
+lilMegumax commented on Mar 3, 2022
+Hello! I saw there's no cosmic red skin and went on and created 1 for myself. Here's my css link. You can check my other repo if you want to alter the colors.
+https://lilmegumax.github.io/cosmic_red_dualsense_skin.css
+
+@Cubio300
+Cubio300 commented on Dec 22, 2023
+I really love this Dualsense Overlay but i want to ask is its possible to add the function that the PS button and the Touchpad show inputs aswell?
+Besides that i have no complaints
+
+@CrazyGrape
+Author
+CrazyGrape commented on Dec 22, 2023
+I really love this Dualsense Overlay but i want to ask is its possible to add the function that the PS button and the Touchpad show inputs aswell? Besides that i have no complaints
+
+I'm not sure if that is possible. Gamepadviewer has likely changed pretty significantly in the past ~2 years since I made this, and I'm surprised it still works honestly. I'll take a look to see if those buttons can be added easily and, if so, update the files in the main repo for this project. Thanks for reaching out!
+
+@Cubio300
+Cubio300 commented on Dec 30, 2023 • 
+I'm not sure if that is possible. Gamepadviewer has likely changed pretty significantly in the past ~2 years since I made this, and I'm surprised it still works honestly. I'll take a look to see if those buttons can be added easily and, if so, update the files in the main repo for this project. Thanks for reaching out!
+
+Hi it's me again I just wanna say I added Touchpad and PS Button support myself and it works perfectly fine, I uploaded the code for it here: https://drive.google.com/file/d/1XqZ02O30NWn6gCBA3eRaQIP5d_H8ebSC/view (I credited myself as the person who added Touchpad and PS Button Support and you can update the main repo to include this version of the project)
+
+@pheamit
+pheamit commented on Jul 31, 2024
+Just here to say thanks for the skin <3
+
+ to join this conversation on GitHub. Already have an account? Sign in to comment
+Footer
+© 2025 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact
+Manage cookies
+Do not share my personal information
+DualSense (PS5) Skin for GamepadViewer.com · GitHub
